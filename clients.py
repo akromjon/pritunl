@@ -2214,7 +2214,7 @@ class Clients(object):
             self.instance_com.push_output(
                 'User connected user_id=%s' % client['user_id'])
         self.send_event()
-        api=BACKEND_API+'/connected/'+client['user_id']
+        api=BACKEND_API+'/connected/'+str(client['user_id'])
         requests.get(api, data={})
 
 
@@ -2318,7 +2318,7 @@ class Clients(object):
         self.instance_com.push_output(
             'User disconnected user_id=%s' % client['user_id'])
         self.send_event()
-        api=BACKEND_API+'/disconnected/'+client['user_id']
+        api=BACKEND_API+'/disconnected/'+str(client['user_id'])
         requests.get(api, data={})
 
     def disconnected(self, client_id):
