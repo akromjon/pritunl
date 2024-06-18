@@ -30,7 +30,7 @@ class SettingsVpn(SettingsGroupMongo):
         'sso_token_ttl': 300,
         'drop_permissions': False,
         'bandwidth_update_rate': 15,
-        'tls_mode': 'tls-auth',
+        'tls_mode': 'tls-crypt',
         'nat_routes': True,
         'ipv6_prefix': 'fd00',
         'ipv6_prefix_wg': 'fd01',
@@ -60,4 +60,3 @@ class SettingsVpn(SettingsGroupMongo):
             '33.0.0.0/8',
         ],
     }
-
